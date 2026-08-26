@@ -1,0 +1,14 @@
+{
+  "name": "coderabbit-test-project",
+  "version": "1.0.0",
+  "description": "Small sample app for evaluating AI PR code review tools (CodeRabbit / Sentry Seer)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "license": "MIT"
+}
