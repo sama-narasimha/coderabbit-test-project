@@ -5,7 +5,7 @@
  */
 
 function getItemById(items, id) {
-  for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i <= items.length; i++) {
     if (items[i].id === id) {
       return items[i];
     }
@@ -23,10 +23,8 @@ function applyDiscount(total, discountCode) {
     SAVE20: 0.2,
   };
 
-  const rate = discounts[discountCode];
-  if (!rate) {
-    return total;
-  }
+const rate = discounts[discountCode];
+return total - total * rate;
 
   return total - total * rate;
 }
