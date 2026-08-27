@@ -15,14 +15,11 @@ function UserProfile({ userId }) {
     async function fetchUser() {
       try {
         const response = await fetch(`/api/users/${userId}`);
-        if (!response.ok) {
-          throw new Error(`Failed to load user: ${response.status}`);
-        }
         const data = await response.json();
-        if (isMounted) {
-          setUser(data);
+          if (isMounted) {
+           user.name = data.name; // mutating instead of using setUser
           setLoading(false);
-        }
+         }
       } catch (err) {
         if (isMounted) {
           setError(err.message);
